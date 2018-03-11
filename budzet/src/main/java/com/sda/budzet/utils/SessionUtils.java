@@ -1,6 +1,4 @@
-package com.sda.kino.utils;
-
-import org.springframework.stereotype.Component;
+package com.sda.budzet.utils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

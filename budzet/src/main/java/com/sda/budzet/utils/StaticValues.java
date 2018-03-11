@@ -1,4 +1,4 @@
-package com.sda.kino.utils;
+package com.sda.budzet.utils;
 
 public class StaticValues {
     public static final String REGISTRATION_SUCCESS = "registration_success";

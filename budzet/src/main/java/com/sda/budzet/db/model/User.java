@@ -1,4 +1,4 @@
-package com.sda.kino.db.model;
+package com.sda.budzet.db.model;
 
 public class User {
     private int id;

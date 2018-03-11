@@ -1,4 +1,4 @@
-package com.sda.kino;
+package com.sda.budzet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

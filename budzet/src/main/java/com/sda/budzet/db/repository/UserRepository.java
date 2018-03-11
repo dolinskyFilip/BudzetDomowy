@@ -1,6 +1,6 @@
-package com.sda.kino.db.repository;
+package com.sda.budzet.db.repository;
 
-import com.sda.kino.db.model.User;
+import com.sda.budzet.db.model.User;
 
 public interface UserRepository {
     boolean isLoginExists(String login);

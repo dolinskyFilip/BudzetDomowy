@@ -1,4 +1,4 @@
-package com.sda.kino.utils;
+package com.sda.budzet.utils;
 
 public class ValidationUtils {
     public static boolean isNotEmptyAndNotContainWhitespace(String value){

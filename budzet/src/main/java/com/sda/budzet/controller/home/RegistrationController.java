@@ -1,8 +1,8 @@
-package com.sda.kino.controller.home;
+package com.sda.budzet.controller.home;
 
-import com.sda.kino.dto.RegistrationForm;
-import com.sda.kino.service.UsersService;
-import com.sda.kino.utils.StaticValues;
+import com.sda.budzet.dto.RegistrationForm;
+import com.sda.budzet.service.UsersService;
+import com.sda.budzet.utils.StaticValues;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;

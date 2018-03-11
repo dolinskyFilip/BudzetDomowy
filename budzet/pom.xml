@@ -81,6 +81,8 @@
                 <version>2.2</version>
                 <configuration>
                     <url>http://localhost:9080/manager/text</url>
+                    <username>admin</username>
+                    <password>password</password>
                     <server>localhost</server>
                     <path>/${build.finalName}</path>
                 </configuration>

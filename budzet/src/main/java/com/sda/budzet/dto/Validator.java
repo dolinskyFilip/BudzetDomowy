@@ -1,4 +1,4 @@
-package com.sda.kino.dto;
+package com.sda.budzet.dto;
 
 public interface Validator {
     boolean isValid();

@@ -1,11 +1,10 @@
-package com.sda.kino.service;
+package com.sda.budzet.service;
 
-import com.sda.kino.db.model.User;
-import com.sda.kino.db.repository.UserRepository;
-import com.sda.kino.dto.LoginForm;
-import com.sda.kino.dto.RegistrationForm;
+import com.sda.budzet.db.model.User;
+import com.sda.budzet.db.repository.UserRepository;
+import com.sda.budzet.dto.LoginForm;
+import com.sda.budzet.dto.RegistrationForm;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

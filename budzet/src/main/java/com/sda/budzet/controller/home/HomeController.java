@@ -1,6 +1,6 @@
-package com.sda.kino.controller.home;
+package com.sda.budzet.controller.home;
 
-import com.sda.kino.utils.StaticValues;
+import com.sda.budzet.utils.StaticValues;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

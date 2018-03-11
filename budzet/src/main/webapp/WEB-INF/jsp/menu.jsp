@@ -1,4 +1,4 @@
-<%@ page import="com.sda.kino.utils.SessionUtils" %>
+<%@ page import="com.sda.budzet.utils.SessionUtils" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -18,8 +18,6 @@
         <p>Witaj, ${sessionScope.get('user')}</p>
         <ul>
             <li><a href="./">Strona główna</a></li>
-            <li><a href="./seances">Wyszukaj seans</a></li>
-        </ul>
         <form action="/logout" method="post">
             <input type="submit" value="Wyloguj">
         </form>

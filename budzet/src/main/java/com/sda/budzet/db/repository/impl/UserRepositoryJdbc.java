@@ -1,7 +1,7 @@
-package com.sda.kino.db.repository.impl;
+package com.sda.budzet.db.repository.impl;
 
-import com.sda.kino.db.model.User;
-import com.sda.kino.db.repository.UserRepository;
+import com.sda.budzet.db.model.User;
+import com.sda.budzet.db.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

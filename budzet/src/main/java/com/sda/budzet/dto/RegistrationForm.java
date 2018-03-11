@@ -1,6 +1,6 @@
-package com.sda.kino.dto;
+package com.sda.budzet.dto;
 
-import com.sda.kino.utils.ValidationUtils;
+import com.sda.budzet.utils.ValidationUtils;
 
 public class RegistrationForm implements Validator{
     private String login;
