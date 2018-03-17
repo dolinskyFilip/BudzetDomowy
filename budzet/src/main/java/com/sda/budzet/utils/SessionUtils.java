@@ -20,7 +20,7 @@ public class SessionUtils {
         }
         if (session.getAttribute(StaticValues.SESSION_USER_KEY) == null){
             if (cookieSessionTime != null){
-                cookieSessionTime.setMaxAge(1);
+                cookieSessionTime.setMaxAge(900);
                 response.addCookie(cookieSessionTime);
             }
             if (!request.getRequestURI().contains("/login") && !request.getRequestURI().contains("/register")){
