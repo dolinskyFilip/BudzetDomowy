@@ -16,5 +16,12 @@ CREATE TABLE income (
   incomeAmount varchar (20)
 );
 
+CREATE SEQUENCE outgoings_seq START 1 INCREMENT 1;
+CREATE TABLE outgoings(
+outgoingsID int PRIMARY KEY default nextval('outgoings_seq')),
+userID int REFERENCES users(id),
+outgoingsCategory varchar(20),
+outgoingsAmount varchar(20)
+);
 
 
