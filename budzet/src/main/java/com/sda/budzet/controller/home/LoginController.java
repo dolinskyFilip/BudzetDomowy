@@ -45,6 +45,7 @@ public class LoginController {
             //Otwieramy sesję użytkownika
             HttpSession session = request.getSession();
             session.setAttribute(StaticValues.SESSION_USER_KEY, user.getLogin());
+            session.setAttribute("UserID",user.getId());
             //Ustawiamy czas trwania sesji za pomocą ciasteczka
             Cookie cookie = new Cookie(StaticValues.SESSION_TIME_KEY, "");
             cookie.setMaxAge(120);

@@ -15,9 +15,6 @@
     <!-- CONTENT -->
     <h2>Dodawanie budżetu</h2>
     <form name="regForm" action="./income" method="post">
-        <p><label>ID Użytkownika</label>
-            <input type="number" name="idUser">
-        </p>
 
         <p><label>Rodzaj Wpłaty</label>
             <input type="text" name="incomeCategory">

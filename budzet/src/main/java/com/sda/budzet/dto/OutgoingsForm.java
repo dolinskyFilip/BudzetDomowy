@@ -1,10 +1,15 @@
 package com.sda.budzet.dto;
 
+
+import java.time.LocalDate;
+
 public class OutgoingsForm {
 
     private int outgoingsID;
     private int userID;
-    private String outgoingsCategory;
+    private int categoryID;
+    private String outgoingsName;
+    private String addDate;
     private double outgoingsAmount;
 
     public int getOutgoingsID() {
@@ -23,12 +28,20 @@ public class OutgoingsForm {
         this.userID = userID;
     }
 
-    public String getOutgoingsCategory() {
-        return outgoingsCategory;
+    public int getCategoryID() {
+        return categoryID;
     }
 
-    public void setOutgoingsCategory(String outgoingsCategory) {
-        this.outgoingsCategory = outgoingsCategory;
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    public String getOutgoingsName() {
+        return outgoingsName;
+    }
+
+    public void setOutgoingsName(String outgoingsName) {
+        this.outgoingsName = outgoingsName;
     }
 
     public double getOutgoingsAmount() {
@@ -38,4 +51,13 @@ public class OutgoingsForm {
     public void setOutgoingsAmount(double outgoingsAmount) {
         this.outgoingsAmount = outgoingsAmount;
     }
+
+    public String getAddDate() {
+        return addDate;
+    }
+
+    public void setAddDate(String addDate) {
+        this.addDate = addDate;
+    }
 }
+

@@ -19,6 +19,8 @@
         <p>Witaj, ${sessionScope.get('user')}</p>
         <ul>
             <li><a href="./">Strona główna</a></li>
+          <li><a href="./income">Dodaj przychód</a></li>
+            <li><a href="./outgoings">Dodaj wydatek</a></li>
         <form action="/logout" method="post">
             <input type="submit" value="Wyloguj">
         </form>

@@ -1,9 +1,16 @@
 package com.sda.budzet.db.model;
 
+import org.apache.tomcat.jni.Local;
+
+import java.sql.Timestamp;
+import java.time.LocalDate;
+
 public class Outgoings {
     private int outgoingsID;
     private int userID;
-    private String outgoingsCategory;
+    private int categoryID;
+    private String outgoingsName;
+    private String addDate;
     private double outgoingsAmount;
 
     public int getOutgoingsID() {
@@ -22,12 +29,20 @@ public class Outgoings {
         this.userID = userID;
     }
 
-    public String getOutgoingsCategory() {
-        return outgoingsCategory;
+    public int getCategoryID() {
+        return categoryID;
     }
 
-    public void setOutgoingsCategory(String outgoingsCategory) {
-        this.outgoingsCategory = outgoingsCategory;
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    public String getOutgoingsName() {
+        return outgoingsName;
+    }
+
+    public void setOutgoingsName(String outgoingsName) {
+        this.outgoingsName = outgoingsName;
     }
 
     public double getOutgoingsAmount() {
@@ -36,5 +51,13 @@ public class Outgoings {
 
     public void setOutgoingsAmount(double outgoingsAmount) {
         this.outgoingsAmount = outgoingsAmount;
+    }
+
+    public String getAddDate() {
+        return addDate;
+    }
+
+    public void setAddDate(String addDate) {
+        this.addDate = addDate;
     }
 }
