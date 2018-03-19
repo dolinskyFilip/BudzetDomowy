@@ -9,6 +9,7 @@ import java.util.List;
 public interface OutgoingsRepository {
     void save(Outgoings outgoings);
     List<Category> getCategoryList();
+    List<Outgoings> getOutgoingsList();
 
 
 }

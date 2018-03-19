@@ -34,6 +34,7 @@ public class OutgoingsController {
         return modelAndView;
     }
 
+
     @RequestMapping(value = "/outgoings", method = RequestMethod.POST)
     public String processRegistration(@ModelAttribute(value = "loginForm") OutgoingsForm form,
                                       HttpServletRequest request){

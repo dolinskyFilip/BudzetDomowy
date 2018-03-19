@@ -15,7 +15,9 @@ public class OutgoingsJdbc implements OutgoingsRepository {
     private static final String INSERT_SQL = "INSERT INTO outgoings(UserID,categoryID,outgoingsName, outgoingsAmount, addDate) " +
             "VALUES ('%d','%d', '%s','%s','%s')";
     private final static String SELECT_ALL = "SELECT * FROM category";
+    private final static String SELECT_ALL_OUTGOINGS = "SELECT * FROM outgoings";
     private BeanPropertyRowMapper<Category> mapper = new BeanPropertyRowMapper<>(Category.class);
+    private BeanPropertyRowMapper<Outgoings> mapper2 = new BeanPropertyRowMapper<>(Outgoings.class);
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -29,5 +31,11 @@ public class OutgoingsJdbc implements OutgoingsRepository {
     @Override
     public List<Category> getCategoryList() {
         return  jdbcTemplate.query(SELECT_ALL, mapper);
+    }
+
+    @Override
+    public List<Outgoings> getOutgoingsList() {
+
+      return  jdbcTemplate.query(SELECT_ALL_OUTGOINGS,mapper2);
     }
 }
