@@ -41,7 +41,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         <input type="number" name="outgoingsAmount">
         </p>
         <p><label>Data Wydatku</label>
-                <input type="text" name="addDate">
+                <input type="date" name="addDate">
                 </p>
         <p><input type="submit" value="Dodaj">
         </p>

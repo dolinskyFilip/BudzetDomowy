@@ -64,22 +64,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                                 </tr>
                               </thead>
                               <tbody>
-                              <c:if test="${empty outgoings}">
-                                    <tr>
-                                      <td colspan="8">No outgoings to Display</td>
-                                    </tr>
-                                  </c:if>
-                                  <c:if test="${not empty outgoings}">
-                            <c:forEach items="${outgoings}" var="outgoings">
-                                 <tr>
 
-                                          <td>${outgoings.categoryID}</td>
-                                          <td>${outgoings.outgoingsName}</td>
-                                          <td>${outgoings.outgoingsAmount}</td>
-                                          <td>${outgoings.addDate}</td>
+                            <c:forEach items="${outgoingsOutputs}" var="i">
+                                 <tr>
+                                          <td>${i.categoryName}</td>
+                                          <td>${i.outgoingsName}</td>
+                                          <td>${i.outgoingsAmount}</td>
+                                          <td>${i.addDate}</td>
                                         </tr>
                             </c:forEach>
-                            </c:if>
+
                             </tbody>
         </table>
 </header>

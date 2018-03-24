@@ -5,7 +5,7 @@ public class IncomeForm {
     private int idUser;
     private int categoryID;
     private String incomeName;
-    private double incomeAmount;
+    private int incomeAmount;
     private String addDate;
 
     public int getId() {
@@ -40,11 +40,11 @@ public class IncomeForm {
         this.incomeName = incomeName;
     }
 
-    public double getIncomeAmount() {
+    public int getIncomeAmount() {
         return incomeAmount;
     }
 
-    public void setIncomeAmount(double incomeAmount) {
+    public void setIncomeAmount(int incomeAmount) {
         this.incomeAmount = incomeAmount;
     }
 

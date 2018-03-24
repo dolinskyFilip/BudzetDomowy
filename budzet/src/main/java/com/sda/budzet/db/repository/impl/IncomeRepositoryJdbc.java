@@ -15,7 +15,7 @@ import java.util.List;
 public class IncomeRepositoryJdbc implements IncomeRepository {
 
     private static final String INSERT_SQL = "INSERT INTO income(idUser, categoryID,incomeName,incomeAmount,addDate) " +
-            "VALUES ('%d','%d','%s','%s','%s')";
+            "VALUES ('%d','%d','%s','%d','%s')";
     private final static String SELECT_ALL_INCOME = "SELECT * FROM income";
     private final static String SELECT_ALL = "SELECT * FROM category";
     private BeanPropertyRowMapper<Income> mapper = new BeanPropertyRowMapper<>(Income.class);

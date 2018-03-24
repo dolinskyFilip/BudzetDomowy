@@ -12,7 +12,7 @@ CREATE TABLE income (
   idUser int REFERENCES users(id),
   categoryID int REFERENCES category(categoryID),
   incomeName varchar (20),
-  incomeAmount varchar (20),
+  incomeAmount int,
   addDate varchar(20)
 );
 
@@ -22,7 +22,7 @@ outgoingsID int PRIMARY KEY default nextval('outgoings_seq'),
 userID int REFERENCES users(id),
 categoryID int REFERENCES category(categoryID),
 outgoingsName varchar (20),
-outgoingsAmount varchar(20),
+outgoingsAmount int ,
 addDate varchar(20)
 );
 

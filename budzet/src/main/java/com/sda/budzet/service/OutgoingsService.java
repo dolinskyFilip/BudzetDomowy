@@ -5,6 +5,7 @@ import com.sda.budzet.db.model.Outgoings;
 
 import com.sda.budzet.db.repository.OutgoingsRepository;
 import com.sda.budzet.dto.OutgoingsForm;
+import com.sda.budzet.dto.OutgoingsOutput;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -20,6 +21,9 @@ public class OutgoingsService {
     }
   public List<Outgoings> getOutgoings(){
         return outgoingsRepository.getOutgoingsList();
+  }
+  public List<OutgoingsOutput> getOutgoingsOutput(){
+      return outgoingsRepository.getOutgoingsOutput();
   }
 
 

@@ -10,7 +10,7 @@ public class Outgoings {
     private int userID;
     private int categoryID;
     private String outgoingsName;
-    private double outgoingsAmount;
+    private int outgoingsAmount;
     private String addDate;
 
 
@@ -46,11 +46,11 @@ public class Outgoings {
         this.outgoingsName = outgoingsName;
     }
 
-    public double getOutgoingsAmount() {
+    public int getOutgoingsAmount() {
         return outgoingsAmount;
     }
 
-    public void setOutgoingsAmount(double outgoingsAmount) {
+    public void setOutgoingsAmount(int outgoingsAmount) {
         this.outgoingsAmount = outgoingsAmount;
     }
 

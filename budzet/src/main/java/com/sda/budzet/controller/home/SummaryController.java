@@ -1,7 +1,9 @@
 package com.sda.budzet.controller.home;
 
+import com.sda.budzet.db.model.Category;
 import com.sda.budzet.db.model.Income;
 import com.sda.budzet.db.model.Outgoings;
+import com.sda.budzet.dto.OutgoingsOutput;
 import com.sda.budzet.service.IncomeService;
 import com.sda.budzet.service.OutgoingsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,7 @@ public class SummaryController {
     @Autowired
     private IncomeService incomeService;
 
+
     @RequestMapping(value = "/summary", method = RequestMethod.GET)
     public ModelAndView summaryPage(@RequestParam(name = "error", required = false) String error) {
         ModelAndView modelAndView = new ModelAndView("summary");
@@ -30,11 +33,17 @@ public class SummaryController {
         modelAndView.addObject("outgoings", outgoings);
         List<Income> income= incomeService.getIncome();
         modelAndView.addObject("income",income);
+        List<OutgoingsOutput> outgoingsOutputs=outgoingsService.getOutgoingsOutput();
+        modelAndView.addObject("outgoingsOutputs",outgoingsOutputs);
+
+
         if (error != null) {
             modelAndView.addObject("errorMsg", true);
         }
 
         return modelAndView;
     }
+
+
 
 }
