@@ -41,10 +41,9 @@ public class OutgoingsController {
         Integer userId = (Integer) request.getSession().getAttribute("UserID");
         form.setUserID(userId);
         outgoingsService.outgoings(form);
-
-
             return "redirect:./login?error=true";
-
     }
+
+
 }
 

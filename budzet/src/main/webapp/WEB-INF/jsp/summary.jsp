@@ -57,13 +57,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                             <table class="table table-striped">
                               <thead>
                                 <tr>
-                                <th>CategoryID</th>
+                                <th>Kategoria</th>
                                   <th>Nazwa wydatku</th>
                                   <th>Kwota</th>
                                   <th>Data</th>
                                 </tr>
                               </thead>
                               <tbody>
+                              <c:if test="${empty outgoingsOutputs}">
+                                                                           <tr>
+                                                                           <td colspan="8">No outgoings to Display</td>
+                                                                          </tr>
+                                                                               </c:if>
+                                                                          <c:if test="${not empty outgoingsOutputs}">
 
                             <c:forEach items="${outgoingsOutputs}" var="i">
                                  <tr>
@@ -73,7 +79,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                                           <td>${i.addDate}</td>
                                         </tr>
                             </c:forEach>
-
+ </c:if>
                             </tbody>
         </table>
 </header>

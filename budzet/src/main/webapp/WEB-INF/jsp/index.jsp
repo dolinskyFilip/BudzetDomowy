@@ -21,14 +21,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <%@ include file="menu.jsp"%>
     <!-- MENU -->
 </div>
-<div class="w3-top">
+
     <c:if test="${registrationComplete eq true}">
         <p>Rejestracja zakończona powodzeniem. Zaloguj się do systemu.</p>
     </c:if>
-    <!-- CONTENT -->
-</div>
 
+
+ <!-- CONTENT -->V
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+<c:if test="${registrationComplete eq true}">
+        <p>Rejestracja zakończona powodzeniem. Zaloguj się do systemu.</p>
+    </c:if>
   <h1 class="w3-margin w3-jumbo">BUDŻET DOMOWY(v1.0)</h1>
   <p class="w3-xlarge">Zarządzaj w prosty sposób swoimi finansami</p>
 </header>

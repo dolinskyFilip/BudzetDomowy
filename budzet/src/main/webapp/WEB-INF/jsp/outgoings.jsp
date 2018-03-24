@@ -33,6 +33,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                     <c:forEach items="${category}" var="category">
                         <option value="${category.categoryID}">${category.categoryName} - ${category.categoryType}</option>
                     </c:forEach>
+
                 </select>
                 <p><label>Nazwa Wydatku</label>
                         <input type="text" name="outgoingsName">

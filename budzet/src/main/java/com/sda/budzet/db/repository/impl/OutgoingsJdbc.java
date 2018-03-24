@@ -15,7 +15,7 @@ import java.util.List;
 public class OutgoingsJdbc implements OutgoingsRepository {
     private static final String INSERT_SQL = "INSERT INTO outgoings(UserID,categoryID,outgoingsName, outgoingsAmount, addDate) " +
             "VALUES ('%d','%d', '%s','%d','%s')";
-    private final static String SELECT_ALL = "SELECT * FROM category";
+    private final static String SELECT_ALL = "SELECT * FROM category WHERE categoryType= 'wydatek'";
     private final static String SELECT_ALL_OUTGOINGS = "SELECT * FROM outgoings";
     private final static String SELECT_OUTGOINGS2 = "SELECT category.CategoryName,outgoings.outgoingsName,outgoings.outgoingsAmount,outgoings.addDate" +
              " FROM outgoings INNER JOIN category ON (outgoings.categoryID=category.categoryID)";
@@ -31,6 +31,7 @@ public class OutgoingsJdbc implements OutgoingsRepository {
         jdbcTemplate.execute(String.format(INSERT_SQL, outgoings.getUserID(),
                 outgoings.getCategoryID(), outgoings.getOutgoingsName(),outgoings.getOutgoingsAmount()*(-1), outgoings.getAddDate()));
     }
+
 
     @Override
     public List<Category> getCategoryList() {
