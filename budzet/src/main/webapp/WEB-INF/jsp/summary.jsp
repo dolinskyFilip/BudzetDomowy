@@ -25,35 +25,63 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <!-- CONTENT -->
 
                     <%-- model z bazy danych--%>
+                    <h1>Twoje wpłaty: </h1>
+                                        <table class="table table-striped">
+                                          <thead>
+                                            <tr>
+                                            <th>CategoryID</th>
+                                              <th>Nazwa Wpłaty</th>
+                                              <th>Kwota </th>
+                                              <th>Data </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                          <c:if test="${empty income}">
+                                             <tr>
+                                             <td colspan="8">No income to Display</td>
+                                            </tr>
+                                                 </c:if>
+                                            <c:if test="${not empty income}">
+                                        <c:forEach items="${income}" var="income">
+                                             <tr>
+                                                      <td>${income.categoryID}</td>
+                                                      <td>${income.incomeName}</td>
+                                                      <td>${income.incomeAmount}</td>
+                                                      <td>${income.addDate}</td>
+                                                    </tr>
+                                        </c:forEach>
+ </c:if>
+                                        </tbody>
+                    </table>
                     <h1>Twoje wydatki: </h1>
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                        <th>CategoryID</th>
-                          <th>Nazwa wydatku</th>
-                          <th>Kwota Wydatku</th>
-                          <th>Data</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                      <c:if test="${empty outgoings}">
-                            <tr>
-                              <td colspan="8">No task to Display</td>
-                            </tr>
-                          </c:if>
-                          <c:if test="${not empty outgoings}">
-                    <c:forEach items="${outgoings}" var="outgoings">
-                         <tr>
-
-                                  <td>${outgoings.categoryID}</td>
-                                  <td>${outgoings.outgoingsName}</td>
-                                  <td>${outgoings.outgoingsAmount}</td>
-                                  <td>${outgoings.addDate}</td>
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                <th>CategoryID</th>
+                                  <th>Nazwa wydatku</th>
+                                  <th>Kwota</th>
+                                  <th>Data</th>
                                 </tr>
-                    </c:forEach>
-                    </c:if>
-                    </tbody>
-</table>
+                              </thead>
+                              <tbody>
+                              <c:if test="${empty outgoings}">
+                                    <tr>
+                                      <td colspan="8">No outgoings to Display</td>
+                                    </tr>
+                                  </c:if>
+                                  <c:if test="${not empty outgoings}">
+                            <c:forEach items="${outgoings}" var="outgoings">
+                                 <tr>
+
+                                          <td>${outgoings.categoryID}</td>
+                                          <td>${outgoings.outgoingsName}</td>
+                                          <td>${outgoings.outgoingsAmount}</td>
+                                          <td>${outgoings.addDate}</td>
+                                        </tr>
+                            </c:forEach>
+                            </c:if>
+                            </tbody>
+        </table>
 </header>
 
 

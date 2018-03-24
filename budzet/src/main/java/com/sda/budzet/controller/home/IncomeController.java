@@ -1,6 +1,7 @@
 package com.sda.budzet.controller.home;
 
 
+import com.sda.budzet.db.model.Category;
 import com.sda.budzet.dto.IncomeForm;
 import com.sda.budzet.service.IncomeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class IncomeController {
@@ -22,6 +24,8 @@ public class IncomeController {
     @RequestMapping(value = "/income", method = RequestMethod.GET)
     public ModelAndView incomePage(@RequestParam(name = "error", required = false) String error) {
         ModelAndView modelAndView = new ModelAndView("income");
+        List<Category> categories = incomeService.getCategory();
+        modelAndView.addObject("category", categories);
         if(error != null){
             modelAndView.addObject("errorMsg", true);
         }

@@ -3,8 +3,10 @@ package com.sda.budzet.db.model;
 public class Income {
     private int id;
     private int idUser;
-    private String incomeCategory;
+    private int categoryID;
+    private String incomeName;
     private double incomeAmount;
+    private String addDate;
 
     public int getId() {
         return id;
@@ -22,12 +24,20 @@ public class Income {
         this.idUser = idUser;
     }
 
-    public String getIncomeCategory() {
-        return incomeCategory;
+    public int getCategoryID() {
+        return categoryID;
     }
 
-    public void setIncomeCategory(String incomeCategory) {
-        this.incomeCategory = incomeCategory;
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    public String getIncomeName() {
+        return incomeName;
+    }
+
+    public void setIncomeName(String incomeName) {
+        this.incomeName = incomeName;
     }
 
     public double getIncomeAmount() {
@@ -36,5 +46,13 @@ public class Income {
 
     public void setIncomeAmount(double incomeAmount) {
         this.incomeAmount = incomeAmount;
+    }
+
+    public String getAddDate() {
+        return addDate;
+    }
+
+    public void setAddDate(String addDate) {
+        this.addDate = addDate;
     }
 }

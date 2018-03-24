@@ -25,24 +25,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <!-- CONTENT -->
     <h2>Dodawanie budżetu</h2>
     <form name="regForm" action="./income" method="post">
-
-        <p><label>Rodzaj Wpłaty</label>
-            <input type="text" name="incomeCategory">
+<label>Wybierz kategorię:</label>
+                <select name="categoryID">
+                    <option value="-1">--Wybierz</option>
+                    <%-- model z bazy danych--%>
+                    <c:forEach items="${category}" var="category">
+                        <option value="${category.categoryID}">${category.categoryName} - ${category.categoryType}</option>
+                    </c:forEach>
+                </select>
+        <p><label>Nazwa Wydatku</label>
+            <input type="text" name="incomeName">
         </p>
 
         <p><label>Kwota Wpłaty</label>
             <input type="number" name="incomeAmount">
         </p>
-
-        <c:if test="${errorMsg eq true}">
-            <span>Formularz zawiera błędy!!!</span>
-        </c:if>
-
+        <p><label>Data Wpłaty</label>
+                        <input type="text" name="addDate">
+                        </p>
         <p><input type="submit" value="Dodaj">
         </p>
-
     </form>
-
 </header>
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">
  <p>Projekt końcowy kursu Java od podstaw realizowany przez Filip Doliński / Rafał Pietrzyk</p>

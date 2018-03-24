@@ -13,7 +13,7 @@ CREATE TABLE income (
   categoryID int REFERENCES category(categoryID),
   incomeName varchar (20),
   incomeAmount varchar (20),
-  addDate timestamp
+  addDate varchar(20)
 );
 
 CREATE SEQUENCE outgoings_seq START 1 INCREMENT 1;

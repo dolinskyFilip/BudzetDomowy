@@ -10,8 +10,9 @@ public class Outgoings {
     private int userID;
     private int categoryID;
     private String outgoingsName;
-    private String addDate;
     private double outgoingsAmount;
+    private String addDate;
+
 
     public int getOutgoingsID() {
         return outgoingsID;
