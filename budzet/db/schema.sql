@@ -1,5 +1,4 @@
 CREATE SEQUENCE users_seq START 1 INCREMENT 1;
-
 CREATE TABLE users (
   id int PRIMARY key default nextval('users_seq'),
   login varchar(20),
@@ -8,20 +7,34 @@ CREATE TABLE users (
 );
 
 CREATE SEQUENCE income_seq START 1 INCREMENT 1;
-
 CREATE TABLE income (
   id int PRIMARY key default nextval ('income_seq'),
   idUser int REFERENCES users(id),
-  incomeCategory varchar (20),
-  incomeAmount varchar (20)
+  categoryID int REFERENCES category(categoryID),
+  incomeName varchar (20),
+  incomeAmount int,
+  addDate varchar(20)
 );
 
 CREATE SEQUENCE outgoings_seq START 1 INCREMENT 1;
 CREATE TABLE outgoings(
-outgoingsID int PRIMARY KEY default nextval('outgoings_seq')),
+outgoingsID int PRIMARY KEY default nextval('outgoings_seq'),
 userID int REFERENCES users(id),
-outgoingsCategory varchar(20),
-outgoingsAmount varchar(20)
+categoryID int REFERENCES category(categoryID),
+outgoingsName varchar (20),
+outgoingsAmount int ,
+addDate varchar(20)
 );
+
+
+CREATE SEQUENCE category_seq START 1 INCREMENT 1;
+CREATE TABLE category(
+categoryID int PRIMARY KEY default nextval('category_seq'),
+categoryName varchar (20),
+categoryType varchar (20),
+);
+
+
+
 
 

@@ -1,39 +1,18 @@
 package com.sda.budzet.dto;
 
+public class OutgoingsOutput {
 
-import java.time.LocalDate;
-
-public class OutgoingsForm {
-
-    private int outgoingsID;
-    private int userID;
-    private int categoryID;
+    private String categoryName;
     private String outgoingsName;
-    private String addDate;
     private int outgoingsAmount;
+    private String addDate;
 
-    public int getOutgoingsID() {
-        return outgoingsID;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setOutgoingsID(int outgoingsID) {
-        this.outgoingsID = outgoingsID;
-    }
-
-    public int getUserID() {
-        return userID;
-    }
-
-    public void setUserID(int userID) {
-        this.userID = userID;
-    }
-
-    public int getCategoryID() {
-        return categoryID;
-    }
-
-    public void setCategoryID(int categoryID) {
-        this.categoryID = categoryID;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public String getOutgoingsName() {
@@ -60,4 +39,3 @@ public class OutgoingsForm {
         this.addDate = addDate;
     }
 }
-
