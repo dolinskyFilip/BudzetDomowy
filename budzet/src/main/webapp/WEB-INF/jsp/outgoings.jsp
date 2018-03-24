@@ -25,7 +25,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
     <!-- CONTENT -->
     <h2>Dodaj swój wydatek</h2>
-    <form name="loginForm" action="./outgoings" method="post">
+    <form name="regForm" action="./outgoings" method="post">
     <label>Wybierz kategorię:</label>
                 <select name="categoryID">
                     <option value="-1">--Wybierz</option>

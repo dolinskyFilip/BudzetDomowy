@@ -36,14 +36,12 @@ public class OutgoingsController {
 
 
     @RequestMapping(value = "/outgoings", method = RequestMethod.POST)
-    public String processRegistration(@ModelAttribute(value = "loginForm") OutgoingsForm form,
+    public String processRegistration(@ModelAttribute(value = "regForm") OutgoingsForm form,
                                       HttpServletRequest request){
         Integer userId = (Integer) request.getSession().getAttribute("UserID");
         form.setUserID(userId);
         outgoingsService.outgoings(form);
-            return "redirect:./login?error=true";
+            return "redirect:./outgoings?error=true";
     }
-
-
 }
 

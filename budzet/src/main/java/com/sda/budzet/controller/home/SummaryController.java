@@ -3,6 +3,7 @@ package com.sda.budzet.controller.home;
 import com.sda.budzet.db.model.Category;
 import com.sda.budzet.db.model.Income;
 import com.sda.budzet.db.model.Outgoings;
+import com.sda.budzet.dto.IncomeOutput;
 import com.sda.budzet.dto.OutgoingsOutput;
 import com.sda.budzet.service.IncomeService;
 import com.sda.budzet.service.OutgoingsService;
@@ -35,6 +36,8 @@ public class SummaryController {
         modelAndView.addObject("income",income);
         List<OutgoingsOutput> outgoingsOutputs=outgoingsService.getOutgoingsOutput();
         modelAndView.addObject("outgoingsOutputs",outgoingsOutputs);
+        List<IncomeOutput> incomeOutput=incomeService.getIncomeOutput();
+        modelAndView.addObject("incomeOutput",incomeOutput);
 
 
         if (error != null) {
