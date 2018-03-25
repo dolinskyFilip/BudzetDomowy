@@ -1,5 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% new SessionUtils().checkSession(request, response); %>
 <html>
 <head>
     <title>Serwis do prowadzenia budżetu domowego</title>
@@ -42,7 +43,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         </p>
 
         <p><label>Adres email</label>
-            <input type="text" name="email">
+            <input type="email" name="email">
         </p>
 
         <c:if test="${errorMsg eq true}">
@@ -55,7 +56,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </form>
 
 </header>
-
+</div>
 </body>
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">
  <p>Projekt końcowy kursu Java od podstaw realizowany przez Filip Doliński / Rafał Pietrzyk</p>

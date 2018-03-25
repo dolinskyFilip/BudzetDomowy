@@ -2,9 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%--<%--%>
-    <%--new SessionUtils().checkSession(request, response);--%>
-<%--%>--%>
+<% new SessionUtils().checkSession(request, response); %>
 
 <c:choose>
     <c:when test="${sessionScope.get('user') eq null}">
@@ -30,7 +28,7 @@
           <a href="./income" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dodaj przychód</a>
             <a href="./outgoings" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Dodaj wydatek</a>
             <a href="./summary" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Bilans</a>
-        <form action="/logout"  method="post">
+        <form action="./logout"  method="post">
             <input type="submit" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" value="Wyloguj">
         </form>
 
@@ -40,7 +38,7 @@
                               <a href="./income" class="w3-bar-item w3-button w3-padding-large">Dodaj przychód</a>
                                 <a href="./outgoings" class="w3-bar-item w3-button w3-padding-large">Dodaj wydatek</a>
                                 <a href="./summary" class="w3-bar-item w3-button w3-padding-large">Bilans</a>
-                            <form action="/logout"  method="post">
+                            <form action="./logout"  method="post">
                                 <input type="submit" class="w3-bar-item w3-button w3-padding-large" value="Wyloguj">
                             </form>
  </div>

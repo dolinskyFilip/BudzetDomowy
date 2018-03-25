@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% new SessionUtils().checkSession(request, response); %>
 <html>
 <head>
     <title>Serwis do prowadzenia budżetu domowego</title>
@@ -33,7 +34,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
                         <option value="${category.categoryID}">${category.categoryName} - ${category.categoryType}</option>
                     </c:forEach>
                 </select>
-        <p><label>Nazwa Wydatku</label>
+        <p><label>Nazwa Wpłaty</label>
             <input type="text" name="incomeName">
         </p>
 

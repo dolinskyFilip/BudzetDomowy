@@ -1,9 +1,7 @@
 package com.sda.budzet.service;
 
-import com.sda.budzet.db.model.Income;
 import com.sda.budzet.db.model.User;
 import com.sda.budzet.db.repository.UserRepository;
-import com.sda.budzet.dto.IncomeForm;
 import com.sda.budzet.dto.LoginForm;
 import com.sda.budzet.dto.RegistrationForm;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -17,8 +15,6 @@ public class UsersService {
     @Resource(name = "userRepositoryJdbc")
     private UserRepository userRepository;
 
-
-
     public boolean isLoginExists(String login){
         return userRepository.isLoginExists(login);
     }
@@ -31,12 +27,8 @@ public class UsersService {
         userRepository.save(user);
     }
 
-
-
     public User login(LoginForm loginForm){
         User user = userRepository.findByLoginAndPassword(loginForm.getLogin(), DigestUtils.sha1Hex(loginForm.getPassword()));
         return user;
     }
-
-
 }

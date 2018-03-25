@@ -1,5 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% new SessionUtils().checkSession(request, response); %>
 <html>
 <head>
     <title>Serwis do prowadzenia budżetu domowego</title>

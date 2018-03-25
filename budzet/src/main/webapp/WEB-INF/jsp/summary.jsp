@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% new SessionUtils().checkSession(request, response); %>
 <html>
 <head>
     <title>Serwis do prowadzenia budżetu domowego</title>
@@ -62,6 +63,7 @@
             </c:forEach>
         </c:if>
 
+        <p> Suma przychodów: ${sumIncome} </p>
         </tbody>
     </table>
     <h1>Twoje wydatki: </h1>
@@ -91,11 +93,15 @@
                 </tr>
             </c:forEach>
         </c:if>
+        <p> Suma wydatków: ${sumOutgoings} </p>
         </tbody>
     </table>
+    <h1>Podsumowanie: </h1>
+    <table class="table table-striped">
+        <thead>
+        <p> Saldo: ${sumBalance} </p>
+    </table>
 </header>
-
-
 </body>
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">
     <p>Projekt końcowy kursu Java od podstaw realizowany przez Filip Doliński / Rafał Pietrzyk</p>

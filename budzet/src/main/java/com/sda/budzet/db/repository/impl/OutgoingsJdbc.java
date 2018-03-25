@@ -4,19 +4,24 @@ import com.sda.budzet.db.model.Category;
 import com.sda.budzet.db.model.Outgoings;
 import com.sda.budzet.db.repository.OutgoingsRepository;
 import com.sda.budzet.dto.OutgoingsOutput;
+import com.sda.budzet.utils.StaticValues;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Repository("outgoingsRepositoryJdbc")
 public class OutgoingsJdbc implements OutgoingsRepository {
+
+
     private static final String INSERT_SQL = "INSERT INTO outgoings(UserID,categoryID,outgoingsName, outgoingsAmount, addDate) " +
             "VALUES ('%d','%d', '%s','%d','%s')";
     private final static String SELECT_ALL = "SELECT * FROM category WHERE categoryType= 'wydatek'";
     private final static String SELECT_ALL_OUTGOINGS = "SELECT * FROM outgoings";
+
     private final static String SELECT_OUTGOINGS2 = "SELECT category.CategoryName,outgoings.outgoingsName,outgoings.outgoingsAmount,outgoings.addDate" +
              " FROM outgoings INNER JOIN category ON (outgoings.categoryID=category.categoryID)";
     private BeanPropertyRowMapper<Category> mapper = new BeanPropertyRowMapper<>(Category.class);

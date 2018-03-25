@@ -18,10 +18,12 @@ public class IncomeRepositoryJdbc implements IncomeRepository {
 
     private static final String INSERT_SQL = "INSERT INTO income(idUser, categoryID,incomeName,incomeAmount,addDate) " +
             "VALUES ('%d','%d','%s','%d','%s')";
+
     private final static String SELECT_ALL_INCOME = "SELECT * FROM income";
     private final static String SELECT_ALL = "SELECT * FROM category WHERE categoryType='wpłata'";
     private final static String SELECT_INCOME2 = "SELECT category.CategoryName,income.incomeName,income.incomeAmount,income.addDate" +
             " FROM income INNER JOIN category ON (income.categoryID=category.categoryID)";
+
     private BeanPropertyRowMapper<Income> mapper = new BeanPropertyRowMapper<>(Income.class);
     private BeanPropertyRowMapper<Category> mapper2 = new BeanPropertyRowMapper<>(Category.class);
     private BeanPropertyRowMapper<IncomeOutput> mapper3 = new BeanPropertyRowMapper<>(IncomeOutput.class);
